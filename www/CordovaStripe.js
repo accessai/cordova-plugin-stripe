@@ -123,10 +123,10 @@ module.exports = {
     exec(success, error, "CordovaStripe", "validateCVC", [cvc]);
   },
 
-  presentPaymentSheet: function (arg0, success, error) {
+  presentPaymentSheet: function (arg0, arg1, success, error) {
     success = success || noop;
     error = error || noop;
-    exec(success, error, 'StripePay', 'presentPaymentSheet', [arg0]);
+    exec(success, error, 'StripePay', 'presentPaymentSheet', [arg0, arg1]);
   },
 
   /**
